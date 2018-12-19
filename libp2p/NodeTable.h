@@ -256,6 +256,9 @@ protected:
 
     void doHandleTimeouts();
 
+    /// Determines if a node with the supplied address is allowed to participate in discovery.
+    bool isAllowedAddress(bi::address const& _addressToCheck) const;
+
     std::unique_ptr<NodeTableEventHandler> m_nodeEventHandler;		///< Event handler for node events.
 
     NodeID const m_hostNodeID;
